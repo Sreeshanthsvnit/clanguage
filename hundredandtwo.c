@@ -11,19 +11,25 @@ int cl=1,c=0,cw=1;
 while(!feof(ptr)){
  ch=fgetc(ptr);
  if(ch=='\n'){
-    cl++;
+    cl++;  
  }
- else if(ch==' '){
- cw++;
- }
+ if(ch==' '||ch=='\n'){
+  printf("%c",ch);   
+  ch=fgetc(ptr);
+  if(ch!=' '){
+    cw++;
+    c++; 
+    printf("%d\n",cw);  
+  }
+ } 
  else{
     c++;
  }
  printf("%c",ch);
 }
-printf("the no. of lines are %d\n",cl);
-printf("the no. of characters are %d\n",c);
-
+fclose(ptr);
+printf("\nthe no. of lines are %d\n",cl);
+printf("the no. of characters are %d\n",c-1);
 printf("the no.of words are:%d\n",cw);
   
     return 0;
