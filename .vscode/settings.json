@@ -1,6 +1,0 @@
-{
-    "files.exclude": {
-        "**/*exe": true
-    },
-    "explorer.excludeGitIgnore": true
-}
