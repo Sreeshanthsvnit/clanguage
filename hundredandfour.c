@@ -3,7 +3,9 @@ enum color{red,green,blue,yellow,black,white};
 int main(){
   
  enum color c;
- c=red;
+ input:
+ printf("enter a number");
+ scanf("%d",&c);
  switch(c){
     case 0:
     printf("0xFF0000");
@@ -21,7 +23,10 @@ int main(){
     printf("0x000000");
     break;
     case 5:
-    printf("0xFFFFFF");    
+    printf("0xFFFFFF");  
+    default:
+    printf("error");
+    goto input;  
  }
     return 0;
 }

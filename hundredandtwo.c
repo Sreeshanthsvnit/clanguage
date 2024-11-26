@@ -13,19 +13,22 @@ while(!feof(ptr)){
  if(ch=='\n'){
     cl++;  
  }
- if(ch==' '||ch=='\n'){
-  printf("%c",ch);   
+ if(ch==' '||ch=='\n'){  
   ch=fgetc(ptr);
+  
   if(ch!=' '){
-    cw++;
-    c++; 
-    printf("%d\n",cw);  
+    if(ch=='\n'){
+    cl++;
+  }
+  else
+   c++;  
+    cw++;    
   }
  } 
  else{
     c++;
  }
- printf("%c",ch);
+  
 }
 fclose(ptr);
 printf("\nthe no. of lines are %d\n",cl);
